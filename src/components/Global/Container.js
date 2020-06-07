@@ -6,9 +6,8 @@ const Container = ({children}) => <div className="container" css={styles}>{child
 
 const styles = css`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  border: 1px solid red;
 `
 
 export default Container;
