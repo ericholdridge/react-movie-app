@@ -10,7 +10,7 @@ import Popup from "./components/Popup/Popup";
 const App = () => {
   // Form input state
   const [inputValue, setInputValue] = useState("");
-  const [formResults, setFormResults] = useState({ results: []});
+  const [formResults, setFormResults] = useState({ results: [], selected: {} });
 
   const api = "http://www.omdbapi.com/?apikey=192ca557";
 
@@ -28,7 +28,7 @@ const App = () => {
         let results = data.Search
         // check if user enters an empty string
         setFormResults((prevState) => {
-          return {...prevState, results: results };
+          return { ...prevState, results: results };
         });
       });
     }
